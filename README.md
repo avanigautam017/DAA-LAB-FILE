@@ -104,11 +104,8 @@ print("Execution Time:", end - start, "seconds")
 
 ## Sample Output
 
-```text
-Enter first number: 10
-Enter second number: 20
-Sum = 30
-```
+<img width="693" height="152" alt="image" src="https://github.com/user-attachments/assets/ee849877-912c-418f-88ac-c3dff378dd4c" />
+
 
 [Back to Index](#index)
 
@@ -141,12 +138,7 @@ tracemalloc.stop()
 
 ## Sample Output
 
-```text
-Enter first number: 10
-Enter second number: 25
-Enter third number: 15
-Largest number = 25
-```
+<img width="451" height="162" alt="image" src="https://github.com/user-attachments/assets/8f68df16-5a56-4734-b7b5-002ec768c887" />
 
 [Back to Index](#index)
 
@@ -236,24 +228,56 @@ To write a Python program to create a Undirected Graph.
 
 ## Program
 
-```import matplotlib.pyplot as plt
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
 
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 15, 30, 25]
 
-plt.plot(x, y)
-plt.xlabel("X-axis")
-plt.ylabel("Y-axis")
-plt.title("Simple Line Graph")
-plt.show()
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2):
+        node1.neighbors.append(node2)
+        node2.neighbors.append(node1)
+
+    def print_graph(self):
+        for node in self.nodes:
+            print(node.data, "->", end=" ")
+
+            for neighbor in node.neighbors:
+                print(neighbor.data, end=" ")
+
+            print()
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b)
+g.add_edge(a, c)
+g.add_edge(b, d)
+g.add_edge(c, d)
+
+g.print_graph()
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="461" height="167" alt="image" src="https://github.com/user-attachments/assets/47d30b6d-b256-4859-80e6-ad1932cedd69" />
+
 
 [Back to Index](#index)
 
@@ -268,24 +292,55 @@ To write a Python program to create a Directed Graph.
 
 ## Program
 
-```import matplotlib.pyplot as plt
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
 
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 15, 30, 25]
 
-plt.plot(x, y)
-plt.xlabel("X-axis")
-plt.ylabel("Y-axis")
-plt.title("Simple Line Graph")
-plt.show()
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2):
+        node1.neighbors.append(node2)
+
+    def print_graph(self):
+        for node in self.nodes:
+            print(node.data, "->", end=" ")
+
+            for neighbor in node.neighbors:
+                print(neighbor.data, end=" ")
+
+            print()
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b)
+g.add_edge(a, c)
+g.add_edge(b, d)
+g.add_edge(c, d)
+
+g.print_graph()
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="527" height="155" alt="image" src="https://github.com/user-attachments/assets/81fa18d3-7739-4851-921c-ddbb664dd4f3" />
+
 
 [Back to Index](#index)
 
@@ -326,14 +381,27 @@ class Graph:
                 print(f"{neighbor.data}({weight})", end=" ")
 
             print()
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b, 5)
+g.add_edge(a, c, 3)
+g.add_edge(b, d, 2)
+g.add_edge(c, d, 4)
+
+g.print_graph()
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="492" height="208" alt="image" src="https://github.com/user-attachments/assets/9b05d70c-abbe-4b4f-a239-1c34f61900bc" />
 
 [Back to Index](#index)
 
@@ -347,10 +415,12 @@ To write a Python program to create a Directed Weighted Graph.
 
 ## Program
 
-```class Node:
+```
+class Node:
     def __init__(self, data):
         self.data = data
         self.neighbors = []
+
 
 class Graph:
     def __init__(self):
@@ -372,29 +442,65 @@ class Graph:
                 print(f"{neighbor.data}({weight})", end=" ")
 
             print()
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b, 5)
+g.add_edge(a, c, 3)
+g.add_edge(b, d, 2)
+g.add_edge(c, d, 4)
+
+g.print_graph()
 ```
 
 ## Sample Output
+<img width="532" height="162" alt="image" src="https://github.com/user-attachments/assets/29eb1dec-4862-4da5-bfab-9ee5670a65ca" />
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+
+
 
 [Back to Index](#index)
 
 ---
 <div style="page-break-after: always;"></div>
 
-# Program 9: BFS 
+# Program 9: Breadth-first Search(BFS) 
 
 ## Aim
 
-To write a Python program to create BFS.
+To write a Python program to implement Breadth-first Search(BFS).
 
 ## Program
 
-```# BFS
+```
+from collections import deque
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
+
+
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2):
+        node1.neighbors.append(node2)
+        node2.neighbors.append(node1)
+
     def BFS(self, start):
         visited = set()
         queue = deque([start])
@@ -408,14 +514,30 @@ To write a Python program to create BFS.
                 if neighbor not in visited:
                     visited.add(neighbor)
                     queue.append(neighbor)
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b)
+g.add_edge(a, c)
+g.add_edge(b, d)
+g.add_edge(c, d)
+
+print("BFS Traversal:")
+g.BFS(a)
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="516" height="115" alt="image" src="https://github.com/user-attachments/assets/08e79acb-72cb-48cd-b793-16f811723ed9" />
+
+
 
 [Back to Index](#index)
 
@@ -426,11 +548,31 @@ Enter a number: 7
 
 ## Aim
 
-To write a Python program to create a DFS.
+To write a Python program to implement a DFS.
 
 ## Program
 
-```def DFS(self, start, visited=None):
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
+
+
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2):
+        node1.neighbors.append(node2)
+        node2.neighbors.append(node1)
+
+    def DFS(self, start, visited=None):
         if visited is None:
             visited = set()
 
@@ -440,14 +582,29 @@ To write a Python program to create a DFS.
         for neighbor in start.neighbors:
             if neighbor not in visited:
                 self.DFS(neighbor, visited)
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b)
+g.add_edge(a, c)
+g.add_edge(b, d)
+g.add_edge(c, d)
+
+print("DFS Traversal:")
+g.DFS(a)
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="503" height="152" alt="image" src="https://github.com/user-attachments/assets/c6c02fdd-b724-433b-a257-b28bbb20ade4" />
+
 
 [Back to Index](#index)
 
@@ -462,8 +619,26 @@ To write a Python program to illustrate dijkstra function.
 
 ## Program
 
-```def dijkstra(self, source):
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
 
+
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2, weight):
+        node1.neighbors.append((node2, weight))
+
+    def dijkstra(self, source):
         distance = {}
 
         # Step 1: Initialize distances
@@ -471,13 +646,10 @@ To write a Python program to illustrate dijkstra function.
             distance[node] = float('inf')
 
         distance[source] = 0
-
         visited = set()
 
-        # Step 2: Repeat until all nodes are visited
+        # Step 2: Find shortest distances
         while len(visited) < len(self.nodes):
-
-            # Find minimum-distance unvisited node
             current = None
             min_distance = float('inf')
 
@@ -489,26 +661,42 @@ To write a Python program to illustrate dijkstra function.
             if current is None:
                 break
 
-            # Mark current node visited
             visited.add(current)
 
-            # Relax edges
+            # Step 3: Update neighbor distances
             for neighbor, weight in current.neighbors:
+                if neighbor not in visited:
+                    new_distance = distance[current] + weight
 
-                new_distance = distance[current] + weight
-
-                if new_distance < distance[neighbor]:
-                    distance[neighbor] = new_distance
+                    if new_distance < distance[neighbor]:
+                        distance[neighbor] = new_distance
 
         return distance
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b, 4)
+g.add_edge(a, c, 1)
+g.add_edge(c, b, 2)
+g.add_edge(b, d, 1)
+g.add_edge(c, d, 5)
+
+distances = g.dijkstra(a)
+
+print("Shortest distances from A:")
+for node, dist in distances.items():
+    print(node.data, ":", dist)
 ```
 
 ## Sample Output
-
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="387" height="197" alt="image" src="https://github.com/user-attachments/assets/93465aae-17cf-4aa2-8ba1-3a74c74d2993" />
 
 [Back to Index](#index)
 
@@ -519,13 +707,30 @@ Enter a number: 7
 
 ## Aim
 
-To write a Python program to display Bell-Man Ford.
+To write a Python program to illustrate Bell-Man Ford.
 
 ## Program
 
-```# Bellman-Ford Algorithm
-    def bellman_ford(self, source):
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.neighbors = []
 
+
+class Graph:
+    def __init__(self):
+        self.nodes = []
+
+    def add_node(self, data):
+        node = Node(data)
+        self.nodes.append(node)
+        return node
+
+    def add_edge(self, node1, node2, weight):
+        node1.neighbors.append((node2, weight))
+
+    def bellman_ford(self, source):
         # Step 1: Initialize distances
         distance = {}
 
@@ -536,38 +741,56 @@ To write a Python program to display Bell-Man Ford.
 
         # Step 2: Relax all edges V-1 times
         for i in range(len(self.nodes) - 1):
+            updated = False
 
             for node in self.nodes:
-
                 for neighbor, weight in node.neighbors:
-
                     if distance[node] != float('inf'):
-
                         new_distance = distance[node] + weight
 
                         if new_distance < distance[neighbor]:
                             distance[neighbor] = new_distance
+                            updated = True
 
-        # Step 3: Check for negative weight cycle
+            if not updated:
+                break
+
+        # Step 3: Check for negative-weight cycle
         for node in self.nodes:
-
             for neighbor, weight in node.neighbors:
-
                 if distance[node] != float('inf'):
-
                     if distance[node] + weight < distance[neighbor]:
                         print("Negative weight cycle detected!")
                         return None
 
         return distance
+
+
+# Main program
+g = Graph()
+
+a = g.add_node("A")
+b = g.add_node("B")
+c = g.add_node("C")
+d = g.add_node("D")
+
+g.add_edge(a, b, 4)
+g.add_edge(a, c, 5)
+g.add_edge(b, c, -2)
+g.add_edge(b, d, 6)
+g.add_edge(c, d, 3)
+
+distances = g.bellman_ford(a)
+
+if distances is not None:
+    print("Shortest distances from A:")
+    for node, dist in distances.items():
+        print(node.data, ":", dist)
 ```
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="461" height="177" alt="image" src="https://github.com/user-attachments/assets/01244dac-7e4d-4aa9-963c-da1f452db4c1" />
 
 [Back to Index](#index)
 
