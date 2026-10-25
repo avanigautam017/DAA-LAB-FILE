@@ -38,8 +38,6 @@ Lakshmangarh, Rajasthan
 
 # INDEX
 
-# INDEX
-
 <table style="width:100%; border-collapse:collapse;">
   <tr>
     <th style="width:10%;">S. No.</th>
@@ -164,7 +162,8 @@ To write a Python program to create a Graph.
 
 ## Program
 
-```import matplotlib.pyplot as plt
+```
+import matplotlib.pyplot as plt
 
 x = [1, 2, 3, 4, 5]
 y = [10, 20, 15, 30, 25]
@@ -197,7 +196,8 @@ To write a Python program to create multiple graph.
 
 ## Program
 
-``import matplotlib.pyplot as plt
+```
+import matplotlib.pyplot as plt
 import math
 x = [1, 2, 3, 4, 5]
 y = [10, 15, 13, 17, 20]
