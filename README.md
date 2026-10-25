@@ -47,32 +47,74 @@ Lakshmangarh, Rajasthan
 
   <tr>
     <td>1</td>
-    <td>Addition of Two Number</td>
-    <td><a href="#program-1-addition-of-two-numbers">Program 1</a></td>
+    <td>Finding Execution time</td>
+    <td><a href="#program-1-Finding-Execution-Time">Program 1</a></td>
   </tr>
 
   <tr>
     <td>2</td>
-    <td>Largest of Three Numbers</td>
-    <td><a href="#program-2-largest-of-three-numbers">Program 2</a></td>
+    <td>Finding Memory Used</td>
+    <td><a href="#program-2-Finding-Memory-Used">Program 2</a></td>
   </tr>
 
   <tr>
     <td>3</td>
-    <td>Factorial of a Number</td>
-    <td><a href="#program-3-factorial-of-a-number">Program 3</a></td>
+    <td>Creating Graph</td>
+    <td><a href="#program-3-Create-Graph">Program 3</a></td>
   </tr>
 
   <tr>
     <td>4</td>
-    <td>Prime Number Check</td>
-    <td><a href="#program-4-prime-number-check">Program 4</a></td>
+    <td>Multiple Graph</td>
+    <td><a href="#program-4-Mutliple-Graph">Program 4</a></td>
   </tr>
 
   <tr>
     <td>5</td>
-    <td>Fibonacci Series</td>
-    <td><a href="#program-5-fibonacci-series">Program 5</a></td>
+    <td>Illustrate Undirected Graph</td>
+    <td><a href="#program-5-Undirected-Graph">Program 5</a></td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>Illustrate Directed Graph</td>
+    <td><a href="#program-6-Directed-Graph">Program 6</a></td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>Illustrate Undirected Weighted Graph</td>
+    <td><a href="#program-7-Undirected-Weighted-Graph">Program 7</a></td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>Illustrate Directed Weighted Graph</td>
+    <td><a href="#program-8-Undirected-Weighted-Graph">Program 8</a></td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+    <td>Implementing BFS</td>
+    <td><a href="#program-9-Breadth-first Search(BFS)">Program 9</a></td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>Implementing DFS</td>
+    <td><a href="#program-10-DFS">Program 10</a></td>
+  </tr>
+
+  <tr>
+    <td>11</td>
+    <td>Implementing Dijkstra Function</td>
+    <td><a href="#program-11-Dijkstra-Function">Program 11</a></td>
+  </tr>
+
+  <tr>
+    <td>12</td>
+    <td>Implementing Bell-Man Ford</td>
+    <td><a href="#program-12-Bell-Man-Ford">Program 12</a></td>
   </tr>
 </table>
 
@@ -169,10 +211,8 @@ plt.show()
 
 ## Sample Output
 
-```text
-Enter a number: 7
-7 is a Prime Number
-```
+<img width="782" height="663" alt="image" src="https://github.com/user-attachments/assets/d81437bd-ecea-4a98-a952-bcfb0063e43d" />
+
 
 [Back to Index](#index)
 
@@ -210,10 +250,8 @@ plt.show()
 
 ## Sample Output
 
-```text
-Enter number of terms: 7
-0 1 1 2 3 5 8
-```
+<img width="348" height="291" alt="image" src="https://github.com/user-attachments/assets/1b568757-6115-45e8-a97a-bbc3f100eb50" />
+
 
 [Back to Index](#index)
 
