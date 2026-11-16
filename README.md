@@ -748,6 +748,8 @@ for node, dist in distances.items():
 ## Sample Output
 <img width="387" height="197" alt="image" src="https://github.com/user-attachments/assets/93465aae-17cf-4aa2-8ba1-3a74c74d2993" />
 
+
+
 [Back to Index](#index)
 
 ---
@@ -843,12 +845,16 @@ if distances is not None:
 <img width="461" height="177" alt="image" src="https://github.com/user-attachments/assets/01244dac-7e4d-4aa9-963c-da1f452db4c1" />
 
 
+
 [Back to Index](#index)
 
 ---
+
 <div style="page-break-after: always;"></div>
 
-# Program 12: Knapsack
+
+
+# Program 13: Knapsack
 
 ## Aim
 
@@ -916,10 +922,14 @@ greedy_knapsack(weights, profits, capacity)
 
 <img width="577" height="282" alt="image" src="https://github.com/user-attachments/assets/c92ab384-14ad-4b2b-b317-9ae52720ad05" />
 
+
 [Back to Index](#index)
+
 
 ---
 <div style="page-break-after: always;"></div>
+
+
 
 # Program 14: Fractional Knapsack
 
@@ -1013,9 +1023,14 @@ else:
 ```
 
 ## Sample Output
+
 <img width="406" height="270" alt="image" src="https://github.com/user-attachments/assets/684141b0-ef85-4ba0-af75-8de125322674" />
 
+
+
+
 [Back to Index](#index)
+
 
 ---
 <div style="page-break-after: always;"></div>
