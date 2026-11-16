@@ -116,6 +116,18 @@ Lakshmangarh, Rajasthan
     <td>Implementing Bell-Man Ford</td>
     <td><a href="#program-12-Bell-Man-Ford">Program 12</a></td>
   </tr>
+
+  <tr>
+    <td>13</td>
+    <td>Implementing knapsack</td>
+    <td><a href="#program-13-Knapsack">Program 13</a></td>
+  </tr>
+
+  <tr>
+    <td>14</td>
+    <td>Implementing fractional knapsack</td>
+    <td><a href="#program-12-Fractional-Knapsack">Program 14</a></td>
+  </tr>
 </table>
 
 
@@ -829,6 +841,179 @@ if distances is not None:
 ## Sample Output
 
 <img width="461" height="177" alt="image" src="https://github.com/user-attachments/assets/01244dac-7e4d-4aa9-963c-da1f452db4c1" />
+
+
+[Back to Index](#index)
+
+---
+<div style="page-break-after: always;"></div>
+
+# Program 12: Knapsack
+
+## Aim
+
+To write a Python program to illustrate Knapsack.
+
+## Program
+
+```
+def greedy_knapsack(weights, profits, capacity):
+
+    n = len(weights)
+
+    # Calculate profit/weight ratio
+    items = []
+
+    for i in range(n):
+        ratio = profits[i] / weights[i]
+        items.append((ratio, weights[i], profits[i], i + 1))
+
+    # Sort items in decreasing order of ratio
+    items.sort(key=lambda x: x[0], reverse=True)
+
+    total_profit = 0
+    total_weight = 0
+
+    print("\nSelected Items:")
+
+    # Select items according to greedy approach
+    for ratio, weight, profit, item_no in items:
+
+        if total_weight + weight <= capacity:
+
+            total_weight += weight
+            total_profit += profit
+
+            print("Item:", item_no,
+                  "Weight:", weight,
+                  "Profit:", profit)
+
+    print("\nTotal Weight:", total_weight)
+    print("Total Profit:", total_profit)
+
+
+# Main Program
+n = int(input("Enter number of items: "))
+
+weights = []
+profits = []
+
+for i in range(n):
+    print("\nItem", i + 1)
+
+    w = float(input("Enter weight: "))
+    p = float(input("Enter profit: "))
+
+    weights.append(w)
+    profits.append(p)
+
+capacity = float(input("\nEnter knapsack capacity: "))
+
+greedy_knapsack(weights, profits, capacity)
+```
+
+## Sample Output
+
+<img width="577" height="282" alt="image" src="https://github.com/user-attachments/assets/c92ab384-14ad-4b2b-b317-9ae52720ad05" />
+
+[Back to Index](#index)
+
+---
+<div style="page-break-after: always;"></div>
+
+# Program 14: Fractional Knapsack
+
+## Aim
+
+To write a Python program to illustrate Fractional Knapsack.
+
+## Program
+
+```
+def fractional_knapsack(weights, profits, capacity):
+
+    n = len(weights)
+
+    # Calculate profit/weight ratio
+    items = []
+
+    for i in range(n):
+        ratio = profits[i] / weights[i]
+        items.append((ratio, weights[i], profits[i], i + 1))
+
+    # Sort items in decreasing order of ratio
+    items.sort(key=lambda x: x[0], reverse=True)
+
+    total_profit = 0
+    total_weight = 0
+
+    print("\nSelected Items:")
+
+    # Select items using greedy approach
+    for ratio, weight, profit, item_no in items:
+
+        if capacity == 0:
+            break
+
+        if weight <= capacity:
+
+            # Take complete item
+            capacity -= weight
+            total_weight += weight
+            total_profit += profit
+
+            print("Item:", item_no,
+                  "Fraction: 1",
+                  "Profit:", profit)
+
+        else:
+
+            # Take fractional part of item
+            fraction = capacity / weight
+
+            total_profit += profit * fraction
+            total_weight += capacity
+
+            print("Item:", item_no,
+                  "Fraction:", round(fraction, 2),
+                  "Profit:", round(profit * fraction, 2))
+
+            capacity = 0
+            break
+
+    print("\nTotal Weight:", round(total_weight, 2))
+    print("Maximum Profit:", round(total_profit, 2))
+
+
+# Main Program
+n = int(input("Enter number of items: "))
+
+weights = []
+profits = []
+
+for i in range(n):
+    print("\nItem", i + 1)
+
+    w = float(input("Enter weight: "))
+    p = float(input("Enter profit: "))
+
+    if w <= 0 or p < 0:
+        print("Invalid weight or profit!")
+        exit()
+
+    weights.append(w)
+    profits.append(p)
+
+capacity = float(input("\nEnter knapsack capacity: "))
+
+if capacity < 0:
+    print("Invalid capacity!")
+else:
+    fractional_knapsack(weights, profits, capacity)
+```
+
+## Sample Output
+<img width="406" height="270" alt="image" src="https://github.com/user-attachments/assets/684141b0-ef85-4ba0-af75-8de125322674" />
 
 [Back to Index](#index)
 
